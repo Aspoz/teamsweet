@@ -1,0 +1,186 @@
+// bower:scss
+// endbower
+
+@import 'animate';
+@import 'spinner';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  color: #404040;
+  font: 400 1em/1.5 'Noto Sans', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2 + p {
+  margin-top: 1rem;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+main {
+  padding-bottom: 8rem;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  height: 80px;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+
+  img {
+    display: block;
+    width: 60px;
+  }
+}
+
+nav {
+  float: right;
+  margin-right: 40px;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    float: left;
+  }
+
+  a {
+    color: #000;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 60px;
+    margin: 10px 0;
+    padding: 0 20px;
+    text-decoration: none;
+
+    &:hover {
+      color: #E31818;
+    }
+  }
+}
+
+.members {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  & > h2,
+  & > p {
+    opacity: 0;
+  }
+}
+
+.memberlist {
+  list-style: none;
+  margin-top: 4rem;
+
+  li {
+    float: left;
+    text-align: center;
+    width: 33.33%;
+
+    & > * {
+      opacity: 0;
+    }
+
+    &:nth-child(1n+4) {
+      margin-top: 4rem;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    padding: 5px;
+    max-width: 12rem;
+    width: 100%;
+  }
+
+  .po img {
+    background-color: #ff5454;
+  }
+
+  .design img {
+    background-color: #16e18c;
+  }
+
+  .dev img {
+    background-color: #66a8f5;
+  }
+}
+
+.blog {
+  margin-top: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+}
+
+.go {
+  background-color: #ff5454;
+  color: #FFF;
+  border-radius: 50%;
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 12rem;
+  margin: 2rem auto 0;
+  text-align: center;
+  text-decoration: none;
+  width: 12rem;
+}
+
+
+.cf:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+@media screen and (min-width: 768px) {
+  .members,
+  .blog {
+    width: 724px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .members,
+  .blog {
+    width: 940px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .members,
+  .blog {
+    width: 1170px;
+  }
+}
