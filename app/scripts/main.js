@@ -38,7 +38,7 @@ function animateMembers() {
 $(function() {
   'use strict';
   $('main').imagesLoaded( function() {
-    $('.spinner').remove();
+    $('.spinner-wrapper').remove();
     animateMembers();
   });
 });
