@@ -21,7 +21,7 @@ body {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 400;
   text-align: center;
 }
@@ -31,6 +31,7 @@ h2 + p {
 }
 
 h3 {
+  font-size: 1.25rem;
   text-align: center;
 }
 
@@ -61,7 +62,7 @@ header {
 
 nav {
   float: right;
-  margin-right: 40px;
+  margin-right: 20px;
 
   ul {
     list-style: none;
@@ -74,11 +75,11 @@ nav {
   a {
     color: #000;
     display: block;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 60px;
     margin: 10px 0;
-    padding: 0 20px;
+    padding: 0 10px;
     text-decoration: none;
 
     &:hover {
@@ -100,19 +101,16 @@ nav {
 
 .memberlist {
   list-style: none;
-  margin-top: 4rem;
+  margin-top: 1rem;
 
   li {
     float: left;
+    margin-top: 2rem;
     text-align: center;
-    width: 33.33%;
+    width: 100%;
 
     & > * {
       opacity: 0;
-    }
-
-    &:nth-child(1n+4) {
-      margin-top: 4rem;
     }
   }
 
@@ -137,7 +135,7 @@ nav {
 }
 
 .blog {
-  margin-top: 12rem;
+  margin-top: 6rem;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
@@ -162,6 +160,56 @@ nav {
   content:"";
   display:table;
   clear:both;
+}
+
+
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 3rem;
+  }
+  nav {
+    margin-right: 40px;
+
+    a {
+      font-size: 1.25rem;
+      padding: 0 20px;
+    }
+  }
+
+  .memberlist {
+    margin-top: 4rem;
+
+    li {
+      margin-top: 0;
+      width: 50%;
+
+      &:nth-child(1n+3) {
+        margin-top: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  h2 {
+    font-size: 4rem;
+  }
+
+  .memberlist li {
+    width: 33.33%;
+
+    &:nth-child(1n+3) {
+      margin-top: 0;
+    }
+
+    &:nth-child(1n+4) {
+      margin-top: 4rem;
+    }
+  }
+
+  .blog {
+    margin-top: 12rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
